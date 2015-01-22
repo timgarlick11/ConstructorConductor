@@ -5,27 +5,43 @@
 
 //Create a User constructor that accepts name, email, password, and totalScore parameters and set them appropriatly
 
-  //code here
+var User = function(name, email, password, totalScore) {
+	this.name = name;
+	this.email = email;
+	this.password = password;
+	this.totalScore = totalScore;
+}
+
+
 
 
 //Create a Question constructor that accepts title, answersArray, rightAnswer, and difficulty parameters
 
-  //code here
+  var Questions = function(title, answersArray, rightAnswer, difficulty) {
+  	this.title = title;
+  	this.answersArray = answersArray;
+  	this.rightAnswer = rightAnswer;
+  	this.difficulty = difficulty;
+  }
 
 
 //Create a users Array which is going to hold all of our users.
 
-  //code here
+usersArr = [];
 
 
 //Let's say three people signed up for our service, create 3 instances of User and add each to the users Array
 
-  //code here
+ var user1 = new User('Tim', 'Tim@email.com', 'abc123', 100);
+ var user2 = new User('Bill', 'Bill@email.com', 'abc', 100);
+ var user3 = new User('Dale', 'Dale@email.com', '123', 100);
+
+ usersArr.push(user1, user2, user3);
 
 
 //Create a questions Array which is going to hold all of our questions
 
-  //code here
+  questionsArr = [];
 
 
 //Now, let's say we wanted to create a quiz about JavaScript. Create three instances of Question which contain the following data
@@ -33,16 +49,22 @@
 //title: 'T/F: JavaScript is just a scripting version of Java'
 //title: "T/F: In Javascript, == doesn't check 'type' but just the value - where === checks type and value"
 //Fill in the rest of the required data as you see appropriate.
-
-  //code here
+var title1 = new Questions('T/F: Inheritance is achieved in JavaScript through Prototypes?','arrAnswers', 'true', 8);
+var title2 = new Questions('T/F: JavaScript is just a scripting version of Java','arrAnswers', 'false', 2);
+var title3 = new Questions("T/F: In Javascript, == doesn't check 'type' but just the value - where === checks type and value",'arrAnswers', 'true', 5);
 
 
 //Now push all of your instances of Question into the questions Array
 
-  //code here
+  questionsArr.push(title1, title2, title3);
 
 console.log('My users Array and my questions arrray are ...');
 //Now loop console.log your users array and your questions array and verify that they're both holding the right data.
 
-  //code here
+ for (var i = 0; i < usersArr.length; i++) {
+ 	console.log(usersArr[i]);
+ };
+ for (var i = 0; i < questionsArr.length; i++) {
+ 	console.log(questionsArr[i]);
+ };
 
